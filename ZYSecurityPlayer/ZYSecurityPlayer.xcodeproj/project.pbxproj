@@ -1,0 +1,608 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9C1BA77D1EBC2EF000ABD6EF /* ZYAVDecoder.c in Sources */ = {isa = PBXBuildFile; fileRef = 9C1BA77B1EBC2EF000ABD6EF /* ZYAVDecoder.c */; };
+		9C52CEA21EF239BF00712337 /* local_server.c in Sources */ = {isa = PBXBuildFile; fileRef = 9C52CE9B1EF239BF00712337 /* local_server.c */; };
+		9C52CEA31EF239BF00712337 /* mongoose.c in Sources */ = {isa = PBXBuildFile; fileRef = 9C52CE9D1EF239BF00712337 /* mongoose.c */; };
+		9C52CEA71EF23A5B00712337 /* LogHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9C52CEA51EF23A5B00712337 /* LogHelper.cpp */; };
+		9C52CEAA1EF262B700712337 /* HttpProxyManager.c in Sources */ = {isa = PBXBuildFile; fileRef = 9C52CEA81EF262B700712337 /* HttpProxyManager.c */; };
+		9C62FEE21EB96CEC00ED86A4 /* ZYRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C62FEE11EB96CEC00ED86A4 /* ZYRootViewController.swift */; };
+		9C62FEE41EB96E9100ED86A4 /* ZYVideoPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C62FEE31EB96E9100ED86A4 /* ZYVideoPlayer.swift */; };
+		9C6643151EC5497A004391D2 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C6643141EC5497A004391D2 /* libz.tbd */; };
+		9C6643161EC54985004391D2 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C6643121EC5495B004391D2 /* libiconv.tbd */; };
+		9C66431A1EC549CC004391D2 /* libbz2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C6643191EC549CC004391D2 /* libbz2.tbd */; };
+		9C66431E1EC54A5C004391D2 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C66431D1EC54A5C004391D2 /* CoreMotion.framework */; };
+		9C6643251EC550BF004391D2 /* libavcodec.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C6643031EC5492A004391D2 /* libavcodec.a */; };
+		9C6643261EC550C1004391D2 /* libavdevice.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C6643041EC5492A004391D2 /* libavdevice.a */; };
+		9C6643271EC550C3004391D2 /* libavfilter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C6643051EC5492A004391D2 /* libavfilter.a */; };
+		9C6643281EC550C4004391D2 /* libavformat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C6643061EC5492A004391D2 /* libavformat.a */; };
+		9C6643291EC550C6004391D2 /* libavutil.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C6643071EC5492A004391D2 /* libavutil.a */; };
+		9C66432A1EC550C7004391D2 /* libswresample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C6643081EC5492A004391D2 /* libswresample.a */; };
+		9C66432B1EC550C9004391D2 /* libswscale.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C6643091EC5492A004391D2 /* libswscale.a */; };
+		9C87EAED1ECE8D1C0014866C /* GameController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C87EAEC1ECE8D1C0014866C /* GameController.framework */; };
+		9CC17B1F1EB81EA100A21393 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC17B1E1EB81EA100A21393 /* AppDelegate.swift */; };
+		9CC17B281EB81EA100A21393 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CC17B271EB81EA100A21393 /* Assets.xcassets */; };
+		9CC17B361EB81EA100A21393 /* ZYSecurityPlayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC17B351EB81EA100A21393 /* ZYSecurityPlayerTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9CC17B321EB81EA100A21393 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9CC17B131EB81EA100A21393 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9CC17B1A1EB81EA100A21393;
+			remoteInfo = ZYSecurityPlayer;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		9C1BA77A1EBC2EF000ABD6EF /* ZYSecurityPlayer-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ZYSecurityPlayer-Bridging-Header.h"; sourceTree = "<group>"; };
+		9C1BA77B1EBC2EF000ABD6EF /* ZYAVDecoder.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ZYAVDecoder.c; sourceTree = "<group>"; };
+		9C1BA77C1EBC2EF000ABD6EF /* ZYAVDecoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYAVDecoder.h; sourceTree = "<group>"; };
+		9C52CE951EF239BF00712337 /* handlers.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = handlers.c; sourceTree = "<group>"; };
+		9C52CE961EF239BF00712337 /* handlers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = handlers.h; sourceTree = "<group>"; };
+		9C52CE971EF239BF00712337 /* mp4_handler.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = mp4_handler.cpp; sourceTree = "<group>"; };
+		9C52CE981EF239BF00712337 /* mp4_handler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mp4_handler.h; sourceTree = "<group>"; };
+		9C52CE991EF239BF00712337 /* server_cpp_api.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = server_cpp_api.cpp; sourceTree = "<group>"; };
+		9C52CE9A1EF239BF00712337 /* server_cpp_api.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = server_cpp_api.h; sourceTree = "<group>"; };
+		9C52CE9B1EF239BF00712337 /* local_server.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = local_server.c; sourceTree = "<group>"; };
+		9C52CE9C1EF239BF00712337 /* local_server.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = local_server.h; sourceTree = "<group>"; };
+		9C52CE9D1EF239BF00712337 /* mongoose.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mongoose.c; sourceTree = "<group>"; };
+		9C52CE9E1EF239BF00712337 /* mongoose.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mongoose.h; sourceTree = "<group>"; };
+		9C52CEA51EF23A5B00712337 /* LogHelper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LogHelper.cpp; sourceTree = "<group>"; };
+		9C52CEA61EF23A5B00712337 /* LogHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogHelper.h; sourceTree = "<group>"; };
+		9C52CEA81EF262B700712337 /* HttpProxyManager.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = HttpProxyManager.c; sourceTree = "<group>"; };
+		9C52CEA91EF262B700712337 /* HttpProxyManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpProxyManager.h; sourceTree = "<group>"; };
+		9C62FEE11EB96CEC00ED86A4 /* ZYRootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZYRootViewController.swift; sourceTree = "<group>"; };
+		9C62FEE31EB96E9100ED86A4 /* ZYVideoPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZYVideoPlayer.swift; sourceTree = "<group>"; };
+		9C6643031EC5492A004391D2 /* libavcodec.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libavcodec.a; path = ZYSecurityPlayer/Classes/Player/ffmpeg/lib/libavcodec.a; sourceTree = SOURCE_ROOT; };
+		9C6643041EC5492A004391D2 /* libavdevice.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libavdevice.a; path = ZYSecurityPlayer/Classes/Player/ffmpeg/lib/libavdevice.a; sourceTree = SOURCE_ROOT; };
+		9C6643051EC5492A004391D2 /* libavfilter.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libavfilter.a; path = ZYSecurityPlayer/Classes/Player/ffmpeg/lib/libavfilter.a; sourceTree = SOURCE_ROOT; };
+		9C6643061EC5492A004391D2 /* libavformat.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libavformat.a; path = ZYSecurityPlayer/Classes/Player/ffmpeg/lib/libavformat.a; sourceTree = SOURCE_ROOT; };
+		9C6643071EC5492A004391D2 /* libavutil.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libavutil.a; path = ZYSecurityPlayer/Classes/Player/ffmpeg/lib/libavutil.a; sourceTree = SOURCE_ROOT; };
+		9C6643081EC5492A004391D2 /* libswresample.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libswresample.a; path = ZYSecurityPlayer/Classes/Player/ffmpeg/lib/libswresample.a; sourceTree = SOURCE_ROOT; };
+		9C6643091EC5492A004391D2 /* libswscale.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libswscale.a; path = ZYSecurityPlayer/Classes/Player/ffmpeg/lib/libswscale.a; sourceTree = SOURCE_ROOT; };
+		9C6643121EC5495B004391D2 /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
+		9C6643141EC5497A004391D2 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		9C6643171EC5499D004391D2 /* VideoToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoToolbox.framework; path = System/Library/Frameworks/VideoToolbox.framework; sourceTree = SDKROOT; };
+		9C6643191EC549CC004391D2 /* libbz2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libbz2.tbd; path = usr/lib/libbz2.tbd; sourceTree = SDKROOT; };
+		9C66431B1EC549E7004391D2 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		9C66431D1EC54A5C004391D2 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		9C66431F1EC54BF1004391D2 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		9C6643221EC54CB4004391D2 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		9C87EAEA1ECE8D0F0014866C /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		9C87EAEC1ECE8D1C0014866C /* GameController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameController.framework; path = System/Library/Frameworks/GameController.framework; sourceTree = SDKROOT; };
+		9CC17B1B1EB81EA100A21393 /* ZYSecurityPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZYSecurityPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9CC17B1E1EB81EA100A21393 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9CC17B271EB81EA100A21393 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9CC17B2C1EB81EA100A21393 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9CC17B311EB81EA100A21393 /* ZYSecurityPlayerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZYSecurityPlayerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9CC17B351EB81EA100A21393 /* ZYSecurityPlayerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZYSecurityPlayerTests.swift; sourceTree = "<group>"; };
+		9CC17B371EB81EA100A21393 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9CC17B181EB81EA100A21393 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C87EAED1ECE8D1C0014866C /* GameController.framework in Frameworks */,
+				9C66431E1EC54A5C004391D2 /* CoreMotion.framework in Frameworks */,
+				9C66431A1EC549CC004391D2 /* libbz2.tbd in Frameworks */,
+				9C6643161EC54985004391D2 /* libiconv.tbd in Frameworks */,
+				9C6643151EC5497A004391D2 /* libz.tbd in Frameworks */,
+				9C6643251EC550BF004391D2 /* libavcodec.a in Frameworks */,
+				9C6643281EC550C4004391D2 /* libavformat.a in Frameworks */,
+				9C6643291EC550C6004391D2 /* libavutil.a in Frameworks */,
+				9C66432A1EC550C7004391D2 /* libswresample.a in Frameworks */,
+				9C66432B1EC550C9004391D2 /* libswscale.a in Frameworks */,
+				9C6643271EC550C3004391D2 /* libavfilter.a in Frameworks */,
+				9C6643261EC550C1004391D2 /* libavdevice.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9CC17B2E1EB81EA100A21393 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9C1BA7781EBC2EA500ABD6EF /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				9C1BA7791EBC2EA500ABD6EF /* Player */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		9C1BA7791EBC2EA500ABD6EF /* Player */ = {
+			isa = PBXGroup;
+			children = (
+				9C52CE921EF239BF00712337 /* HttpProxy */,
+				9C1BA77B1EBC2EF000ABD6EF /* ZYAVDecoder.c */,
+				9C1BA77C1EBC2EF000ABD6EF /* ZYAVDecoder.h */,
+				9C1BA77A1EBC2EF000ABD6EF /* ZYSecurityPlayer-Bridging-Header.h */,
+				9C1BB5541EC3472400823EBA /* ffplayer */,
+			);
+			path = Player;
+			sourceTree = "<group>";
+		};
+		9C1BB5541EC3472400823EBA /* ffplayer */ = {
+			isa = PBXGroup;
+			children = (
+				9C6643021EC54919004391D2 /* ffmpeg */,
+			);
+			path = ffplayer;
+			sourceTree = "<group>";
+		};
+		9C52CE921EF239BF00712337 /* HttpProxy */ = {
+			isa = PBXGroup;
+			children = (
+				9C52CEA41EF23A5B00712337 /* log */,
+				9C52CE931EF239BF00712337 /* localserver */,
+				9C52CEA81EF262B700712337 /* HttpProxyManager.c */,
+				9C52CEA91EF262B700712337 /* HttpProxyManager.h */,
+			);
+			path = HttpProxy;
+			sourceTree = "<group>";
+		};
+		9C52CE931EF239BF00712337 /* localserver */ = {
+			isa = PBXGroup;
+			children = (
+				9C52CE941EF239BF00712337 /* handler */,
+				9C52CE9B1EF239BF00712337 /* local_server.c */,
+				9C52CE9C1EF239BF00712337 /* local_server.h */,
+				9C52CE9D1EF239BF00712337 /* mongoose.c */,
+				9C52CE9E1EF239BF00712337 /* mongoose.h */,
+			);
+			path = localserver;
+			sourceTree = "<group>";
+		};
+		9C52CE941EF239BF00712337 /* handler */ = {
+			isa = PBXGroup;
+			children = (
+				9C52CE951EF239BF00712337 /* handlers.c */,
+				9C52CE961EF239BF00712337 /* handlers.h */,
+				9C52CE971EF239BF00712337 /* mp4_handler.cpp */,
+				9C52CE981EF239BF00712337 /* mp4_handler.h */,
+				9C52CE991EF239BF00712337 /* server_cpp_api.cpp */,
+				9C52CE9A1EF239BF00712337 /* server_cpp_api.h */,
+			);
+			path = handler;
+			sourceTree = "<group>";
+		};
+		9C52CEA41EF23A5B00712337 /* log */ = {
+			isa = PBXGroup;
+			children = (
+				9C52CEA51EF23A5B00712337 /* LogHelper.cpp */,
+				9C52CEA61EF23A5B00712337 /* LogHelper.h */,
+			);
+			path = log;
+			sourceTree = "<group>";
+		};
+		9C6643021EC54919004391D2 /* ffmpeg */ = {
+			isa = PBXGroup;
+			children = (
+				9C6643031EC5492A004391D2 /* libavcodec.a */,
+				9C6643041EC5492A004391D2 /* libavdevice.a */,
+				9C6643051EC5492A004391D2 /* libavfilter.a */,
+				9C6643061EC5492A004391D2 /* libavformat.a */,
+				9C6643071EC5492A004391D2 /* libavutil.a */,
+				9C6643081EC5492A004391D2 /* libswresample.a */,
+				9C6643091EC5492A004391D2 /* libswscale.a */,
+			);
+			name = ffmpeg;
+			sourceTree = "<group>";
+		};
+		9C6643111EC5495B004391D2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9C87EAEC1ECE8D1C0014866C /* GameController.framework */,
+				9C87EAEA1ECE8D0F0014866C /* MediaPlayer.framework */,
+				9C6643221EC54CB4004391D2 /* AVFoundation.framework */,
+				9C66431F1EC54BF1004391D2 /* OpenGLES.framework */,
+				9C66431D1EC54A5C004391D2 /* CoreMotion.framework */,
+				9C66431B1EC549E7004391D2 /* MobileCoreServices.framework */,
+				9C6643191EC549CC004391D2 /* libbz2.tbd */,
+				9C6643171EC5499D004391D2 /* VideoToolbox.framework */,
+				9C6643141EC5497A004391D2 /* libz.tbd */,
+				9C6643121EC5495B004391D2 /* libiconv.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9CC17B121EB81EA100A21393 = {
+			isa = PBXGroup;
+			children = (
+				9CC17B1D1EB81EA100A21393 /* ZYSecurityPlayer */,
+				9CC17B341EB81EA100A21393 /* ZYSecurityPlayerTests */,
+				9CC17B1C1EB81EA100A21393 /* Products */,
+				9C6643111EC5495B004391D2 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		9CC17B1C1EB81EA100A21393 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9CC17B1B1EB81EA100A21393 /* ZYSecurityPlayer.app */,
+				9CC17B311EB81EA100A21393 /* ZYSecurityPlayerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9CC17B1D1EB81EA100A21393 /* ZYSecurityPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				9CC17B1E1EB81EA100A21393 /* AppDelegate.swift */,
+				9C62FEE11EB96CEC00ED86A4 /* ZYRootViewController.swift */,
+				9C62FEE31EB96E9100ED86A4 /* ZYVideoPlayer.swift */,
+				9C1BA7781EBC2EA500ABD6EF /* Classes */,
+				9CC17B271EB81EA100A21393 /* Assets.xcassets */,
+				9CC17B2C1EB81EA100A21393 /* Info.plist */,
+			);
+			path = ZYSecurityPlayer;
+			sourceTree = "<group>";
+		};
+		9CC17B341EB81EA100A21393 /* ZYSecurityPlayerTests */ = {
+			isa = PBXGroup;
+			children = (
+				9CC17B351EB81EA100A21393 /* ZYSecurityPlayerTests.swift */,
+				9CC17B371EB81EA100A21393 /* Info.plist */,
+			);
+			path = ZYSecurityPlayerTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9CC17B1A1EB81EA100A21393 /* ZYSecurityPlayer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9CC17B3A1EB81EA100A21393 /* Build configuration list for PBXNativeTarget "ZYSecurityPlayer" */;
+			buildPhases = (
+				9CC17B171EB81EA100A21393 /* Sources */,
+				9CC17B181EB81EA100A21393 /* Frameworks */,
+				9CC17B191EB81EA100A21393 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ZYSecurityPlayer;
+			productName = ZYSecurityPlayer;
+			productReference = 9CC17B1B1EB81EA100A21393 /* ZYSecurityPlayer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9CC17B301EB81EA100A21393 /* ZYSecurityPlayerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9CC17B3D1EB81EA100A21393 /* Build configuration list for PBXNativeTarget "ZYSecurityPlayerTests" */;
+			buildPhases = (
+				9CC17B2D1EB81EA100A21393 /* Sources */,
+				9CC17B2E1EB81EA100A21393 /* Frameworks */,
+				9CC17B2F1EB81EA100A21393 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9CC17B331EB81EA100A21393 /* PBXTargetDependency */,
+			);
+			name = ZYSecurityPlayerTests;
+			productName = ZYSecurityPlayerTests;
+			productReference = 9CC17B311EB81EA100A21393 /* ZYSecurityPlayerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9CC17B131EB81EA100A21393 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = tencent;
+				TargetAttributes = {
+					9CC17B1A1EB81EA100A21393 = {
+						CreatedOnToolsVersion = 8.3;
+						DevelopmentTeam = 2P9NMM6JZE;
+						LastSwiftMigration = 0830;
+						ProvisioningStyle = Manual;
+					};
+					9CC17B301EB81EA100A21393 = {
+						CreatedOnToolsVersion = 8.3;
+						DevelopmentTeam = 2P9NMM6JZE;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 9CC17B1A1EB81EA100A21393;
+					};
+				};
+			};
+			buildConfigurationList = 9CC17B161EB81EA100A21393 /* Build configuration list for PBXProject "ZYSecurityPlayer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9CC17B121EB81EA100A21393;
+			productRefGroup = 9CC17B1C1EB81EA100A21393 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9CC17B1A1EB81EA100A21393 /* ZYSecurityPlayer */,
+				9CC17B301EB81EA100A21393 /* ZYSecurityPlayerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9CC17B191EB81EA100A21393 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9CC17B281EB81EA100A21393 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9CC17B2F1EB81EA100A21393 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9CC17B171EB81EA100A21393 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C52CEAA1EF262B700712337 /* HttpProxyManager.c in Sources */,
+				9C52CEA21EF239BF00712337 /* local_server.c in Sources */,
+				9C52CEA31EF239BF00712337 /* mongoose.c in Sources */,
+				9C62FEE41EB96E9100ED86A4 /* ZYVideoPlayer.swift in Sources */,
+				9CC17B1F1EB81EA100A21393 /* AppDelegate.swift in Sources */,
+				9C1BA77D1EBC2EF000ABD6EF /* ZYAVDecoder.c in Sources */,
+				9C52CEA71EF23A5B00712337 /* LogHelper.cpp in Sources */,
+				9C62FEE21EB96CEC00ED86A4 /* ZYRootViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9CC17B2D1EB81EA100A21393 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9CC17B361EB81EA100A21393 /* ZYSecurityPlayerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9CC17B331EB81EA100A21393 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9CC17B1A1EB81EA100A21393 /* ZYSecurityPlayer */;
+			targetProxy = 9CC17B321EB81EA100A21393 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		9CC17B381EB81EA100A21393 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		9CC17B391EB81EA100A21393 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9CC17B3B1EB81EA100A21393 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = 2P9NMM6JZE;
+				HEADER_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/ZYSecurityPlayer/Classes/Player/ffmpeg/include",
+					"$(PROJECT_DIR)/ZYSecurityPlayer/Classes/Player/SDL2/include",
+				);
+				INFOPLIST_FILE = ZYSecurityPlayer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ZYSecurityPlayer/Classes/Player/ffmpeg/lib",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.tencent.ZYSecurityPlayer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "b351c5f9-d299-40d4-9c37-13d79bd40939";
+				PROVISIONING_PROFILE_SPECIFIER = DevSongmingyun;
+				SWIFT_OBJC_BRIDGING_HEADER = "ZYSecurityPlayer/Classes/Player/ZYSecurityPlayer-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		9CC17B3C1EB81EA100A21393 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = 2P9NMM6JZE;
+				HEADER_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/ZYSecurityPlayer/Classes/Player/ffmpeg/include",
+					"$(PROJECT_DIR)/ZYSecurityPlayer/Classes/Player/SDL2/include",
+				);
+				INFOPLIST_FILE = ZYSecurityPlayer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ZYSecurityPlayer/Classes/Player/ffmpeg/lib",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.tencent.ZYSecurityPlayer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "b351c5f9-d299-40d4-9c37-13d79bd40939";
+				PROVISIONING_PROFILE_SPECIFIER = DevSongmingyun;
+				SWIFT_OBJC_BRIDGING_HEADER = "ZYSecurityPlayer/Classes/Player/ZYSecurityPlayer-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		9CC17B3E1EB81EA100A21393 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 2P9NMM6JZE;
+				INFOPLIST_FILE = ZYSecurityPlayerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tencent.ZYSecurityPlayerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ZYSecurityPlayer.app/ZYSecurityPlayer";
+			};
+			name = Debug;
+		};
+		9CC17B3F1EB81EA100A21393 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 2P9NMM6JZE;
+				INFOPLIST_FILE = ZYSecurityPlayerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tencent.ZYSecurityPlayerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ZYSecurityPlayer.app/ZYSecurityPlayer";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9CC17B161EB81EA100A21393 /* Build configuration list for PBXProject "ZYSecurityPlayer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9CC17B381EB81EA100A21393 /* Debug */,
+				9CC17B391EB81EA100A21393 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9CC17B3A1EB81EA100A21393 /* Build configuration list for PBXNativeTarget "ZYSecurityPlayer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9CC17B3B1EB81EA100A21393 /* Debug */,
+				9CC17B3C1EB81EA100A21393 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9CC17B3D1EB81EA100A21393 /* Build configuration list for PBXNativeTarget "ZYSecurityPlayerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9CC17B3E1EB81EA100A21393 /* Debug */,
+				9CC17B3F1EB81EA100A21393 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9CC17B131EB81EA100A21393 /* Project object */;
+}
