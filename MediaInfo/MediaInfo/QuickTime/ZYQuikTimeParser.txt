@@ -1,0 +1,225 @@
+//
+//  ZYQuikTimeParser.m
+//  MP4File
+//
+//  Created by mysong on 2017/1/16.
+//  Copyright © 2017年 mysong. All rights reserved.
+//
+
+#import "ZYQuikTimeParser.h"
+#import "QuikTimeDefine.h"
+
+#define ZY_PRE_FLAG @"---"
+
+@interface ZYQuikTimeParser()
+{
+    NSString *_filePath;
+    FILE    *_pfile;
+    
+    uint32_t _timeScale;
+    
+    NSInteger _parseLevel;
+}
+@end
+
+@implementation ZYQuikTimeParser
+
++ (void)parseVideoFile:(NSString *)filePath level:(NSInteger)level
+{
+    if (filePath.length == 0) {
+        return;
+    }
+    
+    ZYQuikTimeParser *parser = [[ZYQuikTimeParser alloc] initWithFilePath:filePath];
+    parser.parseLevel = level;
+    [parser parse];
+}
+
+- (id)initWithFilePath:(NSString *)filePath
+{
+    if (self = [super init]) {
+        _filePath = filePath;
+        _parseLevel = 0;
+        
+        //[self parse];
+    }
+    return self;
+}
+
+- (BOOL)isEqualBoxType:(char *)type boxtype:(uint32_t)boxtype
+{
+    boxtype = ntohl(boxtype);
+    char *pBoxType = (char *)&boxtype;
+    return type[0] == pBoxType[0] && type[1] == pBoxType[1] && type[2] == pBoxType[2] && type[3] == pBoxType[3];
+}
+
+- (void)parse
+{
+    _pfile = fopen(_filePath.UTF8String, "rb");
+    
+    Mp4BoxInfo info = {0};
+    Mp4BoxHeader *head = &info.head;
+    size_t headLen = sizeof(Mp4BoxHeader);
+    
+    printf("\n%s\n", _filePath.UTF8String);
+    while (fread(head, headLen, 1, _pfile) != 0) {
+        head->size = ntohl(head->size);
+        if (head->size == 1) {
+            long long realsize = 0;
+            fread(&realsize, 8, 1, _pfile);
+            info.size = htonll(realsize);
+        } else {
+            info.size = head->size;
+        }
+        info.offset = ftell(_pfile) - headLen;
+        printf("%c%c%c%c offset %lld  length(%lld)\n", head->type[0], head->type[1], head->type[2], head->type[3], info.offset, info.size);
+        
+        if ([self isContainerBox:head]) {
+            [self parseContainerBox:&info fileHandle:_pfile preText:ZY_PRE_FLAG];
+        }
+        
+        fseek(_pfile, info.size-headLen, SEEK_CUR);
+    }
+    
+    fclose(_pfile);
+    //NSLog(@"");
+}
+
+- (BOOL)isContainerBox:(Mp4BoxHeader *)header
+{
+    uint32_t boxType = 0;
+    memcpy((void *)&boxType, &header->type[0], 4);
+    boxType = ntohl(boxType);
+    return (boxType ==Mp4BoxType_trak
+            || boxType ==Mp4BoxType_moov
+            || boxType ==Mp4BoxType_mdia
+            || boxType ==Mp4BoxType_minf
+            || boxType ==Mp4BoxType_stbl);
+}
+
+- (BOOL)checkNeedParseWithPreText:(NSString *)preTxt
+{
+    if (_parseLevel < 0) {
+        return YES;
+    }
+    NSInteger lv = preTxt.length / [ZY_PRE_FLAG length];
+    return lv <= _parseLevel;
+}
+
+- (void)parseContainerBox:(Mp4BoxInfo *)info fileHandle:(FILE *)pfile preText:(NSString *)preTxt;
+{
+    if (![self checkNeedParseWithPreText:preTxt]) {
+        return;
+    }
+    
+    long oldPos = ftell(pfile);
+    
+    Mp4BoxInfo info = {0};
+    size_t headLen = sizeof(Mp4BoxHeader);
+    
+    while (fread(&header, headLen, 1, pfile) != 0) {
+        header.size = ntohl(header.size);
+        printf("%s%c%c%c%c (offset=%ld  length=%d)\n", preTxt.UTF8String, header.type[0], header.type[1], header.type[2], header.type[3], ftell(pfile) - headLen, header.size);
+        
+        if ([self isContainerBox:&header]) {
+            [self parseContainerBox:&header fileHandle:pfile preText:[preTxt stringByAppendingString:ZY_PRE_FLAG]];
+        } else if ([self isEqualBoxType:header.type boxtype:Mp4BoxType_mvhd]) {
+            [self parseMvhd:&header fileHandle:pfile preText:[preTxt stringByAppendingString:ZY_PRE_FLAG]];
+        } else if ([self isEqualBoxType:header.type boxtype:Mp4BoxType_tkhd]) {
+            [self parseTkhd:&header fileHandle:pfile preText:[preTxt stringByAppendingString:ZY_PRE_FLAG]];
+        }
+        
+        fseek(pfile, header.size-headLen, SEEK_CUR);
+        
+        long curPos = ftell(pfile);
+        if (curPos >= (oldPos+boxHeader->size-headLen)) {
+            break;
+        }
+    }
+    
+    fseek(pfile, oldPos, SEEK_SET);
+}
+
+
+//mvhd
+- (void)parseMvhd:(Mp4BigBoxHeader *)mvhdHeader fileHandle:(FILE *)pfile preText:(NSString *)preTxt;
+{
+    if (![self checkNeedParseWithPreText:preTxt]) {
+        return;
+    }
+    
+    if (mvhdHeader->size == 0) {
+        return;
+    }
+    
+    long oldPos = ftell(pfile);
+    
+    
+    //如果写入数据超过分配的栈长度，会抛异常
+    Mp4MvhdBox mvhdBox = {1};
+    
+    fseek(pfile, -sizeof(Mp4BoxHeader), SEEK_CUR);
+    size_t result = fread((void *)(&mvhdBox), MIN(sizeof(mvhdBox), mvhdHeader->size), 1, pfile);
+    
+    if (result > 0) {
+        //修正字节序
+        mvhdBox.timeScale = ntohl(mvhdBox.timeScale);
+        mvhdBox.duraion = ntohl(mvhdBox.duraion);
+        
+        _timeScale = mvhdBox.timeScale;
+        
+        CGFloat duration = mvhdBox.duraion * 1.0 / mvhdBox.timeScale;
+        NSInteger intDur = duration;
+        
+        printf("%s时长(%.02f秒)(%zd分%zd秒)\n", preTxt.UTF8String, duration, intDur/60, intDur%60);
+    }
+    
+    
+    fseek(pfile, oldPos, SEEK_SET);
+}
+
+//tkhd Track header atoms
+- (void)parseTkhd:(Mp4BoxHeader *)tkhdHeader fileHandle:(FILE *)pfile preText:(NSString *)preTxt;
+{
+    if (![self checkNeedParseWithPreText:preTxt]) {
+        return;
+    }
+    
+    if (tkhdHeader->size == 0) {
+        return;
+    }
+    
+    long oldPos = ftell(pfile);
+    
+    
+    //如果写入数据超过分配的栈长度，会抛异常
+    MP4TkhdBox tkhdBox = {1};
+    
+    fseek(pfile, -sizeof(Mp4BoxHeader), SEEK_CUR);
+    size_t result = fread((void *)(&tkhdBox), MIN(sizeof(MP4TkhdBox), tkhdHeader->size), 1, pfile);
+    
+    if (result > 0) {
+        //修正字节序
+        tkhdBox.trackId = ntohl(tkhdBox.trackId);
+        if (tkhdBox.trackWidth & 0xffff0000) {
+            tkhdBox.trackWidth = ntohl(tkhdBox.trackWidth);
+            tkhdBox.trackHeight = ntohl(tkhdBox.trackHeight);
+        } else {
+            tkhdBox.trackWidth = ntohs(tkhdBox.trackWidth);
+            tkhdBox.trackHeight = ntohs(tkhdBox.trackHeight);
+        }
+        
+        
+        tkhdBox.duraion = ntohl(tkhdBox.duraion);
+        
+        CGFloat duration = tkhdBox.duraion * 1.0 / _timeScale;
+        NSInteger intDur = duration;
+        
+        printf("%sTrackId(%d) 时长(%.02f秒)(%zd分%zd秒)\n", preTxt.UTF8String, tkhdBox.trackId, duration, intDur/60, intDur%60);
+        printf("%s layer(%d) volume(%d) width(%d) height(%d)\n", preTxt.UTF8String, tkhdBox.layer, tkhdBox.layer, tkhdBox.trackWidth, tkhdBox.trackHeight);
+    }
+    
+    
+    fseek(pfile, oldPos, SEEK_SET);
+}
+@end

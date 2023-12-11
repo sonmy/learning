@@ -1,0 +1,354 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9C09B17128C46DCC0041C46A /* ZYFLVParser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9C09B16F28C46DCC0041C46A /* ZYFLVParser.cpp */; };
+		9C0B270328AE86990021AF51 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9C0B270228AE86990021AF51 /* main.cpp */; };
+		9C0B270B28AE86C80021AF51 /* ZYFileReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9C0B270928AE86C80021AF51 /* ZYFileReader.cpp */; };
+		9C0B270E28AE8E090021AF51 /* ZYBufferItem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9C0B270C28AE8E090021AF51 /* ZYBufferItem.cpp */; };
+		9CD0738D299CBD130056E143 /* ZYSocket.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9CD0738B299CBD130056E143 /* ZYSocket.cpp */; };
+		9CD07390299CBD220056E143 /* ZYHttpClient.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9CD0738E299CBD220056E143 /* ZYHttpClient.cpp */; };
+		9CDAC85D2AF1F49700CF8410 /* ZYMP4Parser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9CDAC85B2AF1F49700CF8410 /* ZYMP4Parser.cpp */; };
+		9CEE643029D3E6B700DA3E22 /* ParseFLV.c in Sources */ = {isa = PBXBuildFile; fileRef = 9CEE642F29D3E6B700DA3E22 /* ParseFLV.c */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		9C0B26FD28AE86990021AF51 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		9C09B16F28C46DCC0041C46A /* ZYFLVParser.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ZYFLVParser.cpp; sourceTree = "<group>"; };
+		9C09B17028C46DCC0041C46A /* ZYFLVParser.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ZYFLVParser.hpp; sourceTree = "<group>"; };
+		9C0B26FF28AE86990021AF51 /* MediaInfo */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MediaInfo; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C0B270228AE86990021AF51 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		9C0B270928AE86C80021AF51 /* ZYFileReader.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ZYFileReader.cpp; sourceTree = "<group>"; };
+		9C0B270A28AE86C80021AF51 /* ZYFileReader.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ZYFileReader.hpp; sourceTree = "<group>"; };
+		9C0B270C28AE8E090021AF51 /* ZYBufferItem.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ZYBufferItem.cpp; sourceTree = "<group>"; };
+		9C0B270D28AE8E090021AF51 /* ZYBufferItem.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ZYBufferItem.hpp; sourceTree = "<group>"; };
+		9CD0738B299CBD130056E143 /* ZYSocket.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ZYSocket.cpp; sourceTree = "<group>"; };
+		9CD0738C299CBD130056E143 /* ZYSocket.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ZYSocket.hpp; sourceTree = "<group>"; };
+		9CD0738E299CBD220056E143 /* ZYHttpClient.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ZYHttpClient.cpp; sourceTree = "<group>"; };
+		9CD0738F299CBD220056E143 /* ZYHttpClient.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ZYHttpClient.hpp; sourceTree = "<group>"; };
+		9CD0DB5E29A51C600056E143 /* GCDAsyncSocket.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = GCDAsyncSocket.txt; sourceTree = "<group>"; };
+		9CD0DB5F29A51C600056E143 /* GCDAsyncSocket.h.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = GCDAsyncSocket.h.txt; sourceTree = "<group>"; };
+		9CDAC85B2AF1F49700CF8410 /* ZYMP4Parser.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ZYMP4Parser.cpp; sourceTree = "<group>"; };
+		9CDAC85C2AF1F49700CF8410 /* ZYMP4Parser.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ZYMP4Parser.hpp; sourceTree = "<group>"; };
+		9CDAC8612AF235FE00CF8410 /* QuickTimeDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuickTimeDefine.h; sourceTree = "<group>"; };
+		9CDAC8632AF235FE00CF8410 /* QuickTimeAtomTypeDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuickTimeAtomTypeDefine.h; sourceTree = "<group>"; };
+		9CDAC8652AF235FE00CF8410 /* ZYQuikTimeParser.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ZYQuikTimeParser.txt; sourceTree = "<group>"; };
+		9CEE642F29D3E6B700DA3E22 /* ParseFLV.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ParseFLV.c; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9C0B26FC28AE86990021AF51 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9C0B26F628AE86990021AF51 = {
+			isa = PBXGroup;
+			children = (
+				9C0B270128AE86990021AF51 /* MediaInfo */,
+				9C0B270028AE86990021AF51 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9C0B270028AE86990021AF51 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9C0B26FF28AE86990021AF51 /* MediaInfo */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9C0B270128AE86990021AF51 /* MediaInfo */ = {
+			isa = PBXGroup;
+			children = (
+				9CDAC85E2AF235FE00CF8410 /* QuickTime */,
+				9CD0738A299CBCE10056E143 /* network */,
+				9C0B270228AE86990021AF51 /* main.cpp */,
+				9C0B270928AE86C80021AF51 /* ZYFileReader.cpp */,
+				9C0B270A28AE86C80021AF51 /* ZYFileReader.hpp */,
+				9C0B270C28AE8E090021AF51 /* ZYBufferItem.cpp */,
+				9C0B270D28AE8E090021AF51 /* ZYBufferItem.hpp */,
+				9C09B16F28C46DCC0041C46A /* ZYFLVParser.cpp */,
+				9C09B17028C46DCC0041C46A /* ZYFLVParser.hpp */,
+				9CEE642F29D3E6B700DA3E22 /* ParseFLV.c */,
+			);
+			path = MediaInfo;
+			sourceTree = "<group>";
+		};
+		9CD0738A299CBCE10056E143 /* network */ = {
+			isa = PBXGroup;
+			children = (
+				9CD0DB5F29A51C600056E143 /* GCDAsyncSocket.h.txt */,
+				9CD0DB5E29A51C600056E143 /* GCDAsyncSocket.txt */,
+				9CD0738B299CBD130056E143 /* ZYSocket.cpp */,
+				9CD0738C299CBD130056E143 /* ZYSocket.hpp */,
+				9CD0738E299CBD220056E143 /* ZYHttpClient.cpp */,
+				9CD0738F299CBD220056E143 /* ZYHttpClient.hpp */,
+			);
+			path = network;
+			sourceTree = "<group>";
+		};
+		9CDAC85E2AF235FE00CF8410 /* QuickTime */ = {
+			isa = PBXGroup;
+			children = (
+				9CDAC8612AF235FE00CF8410 /* QuickTimeDefine.h */,
+				9CDAC8632AF235FE00CF8410 /* QuickTimeAtomTypeDefine.h */,
+				9CDAC8652AF235FE00CF8410 /* ZYQuikTimeParser.txt */,
+				9CDAC85C2AF1F49700CF8410 /* ZYMP4Parser.hpp */,
+				9CDAC85B2AF1F49700CF8410 /* ZYMP4Parser.cpp */,
+			);
+			path = QuickTime;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9C0B26FE28AE86990021AF51 /* MediaInfo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9C0B270628AE86990021AF51 /* Build configuration list for PBXNativeTarget "MediaInfo" */;
+			buildPhases = (
+				9C0B26FB28AE86990021AF51 /* Sources */,
+				9C0B26FC28AE86990021AF51 /* Frameworks */,
+				9C0B26FD28AE86990021AF51 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MediaInfo;
+			productName = MediaInfo;
+			productReference = 9C0B26FF28AE86990021AF51 /* MediaInfo */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9C0B26F728AE86990021AF51 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					9C0B26FE28AE86990021AF51 = {
+						CreatedOnToolsVersion = 13.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 9C0B26FA28AE86990021AF51 /* Build configuration list for PBXProject "MediaInfo" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9C0B26F628AE86990021AF51;
+			productRefGroup = 9C0B270028AE86990021AF51 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9C0B26FE28AE86990021AF51 /* MediaInfo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9C0B26FB28AE86990021AF51 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C09B17128C46DCC0041C46A /* ZYFLVParser.cpp in Sources */,
+				9CD0738D299CBD130056E143 /* ZYSocket.cpp in Sources */,
+				9C0B270328AE86990021AF51 /* main.cpp in Sources */,
+				9CDAC85D2AF1F49700CF8410 /* ZYMP4Parser.cpp in Sources */,
+				9CD07390299CBD220056E143 /* ZYHttpClient.cpp in Sources */,
+				9C0B270E28AE8E090021AF51 /* ZYBufferItem.cpp in Sources */,
+				9CEE643029D3E6B700DA3E22 /* ParseFLV.c in Sources */,
+				9C0B270B28AE86C80021AF51 /* ZYFileReader.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		9C0B270428AE86990021AF51 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		9C0B270528AE86990021AF51 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		9C0B270728AE86990021AF51 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = 28UUTH4A64;
+				ENABLE_HARDENED_RUNTIME = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		9C0B270828AE86990021AF51 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = 28UUTH4A64;
+				ENABLE_HARDENED_RUNTIME = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9C0B26FA28AE86990021AF51 /* Build configuration list for PBXProject "MediaInfo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9C0B270428AE86990021AF51 /* Debug */,
+				9C0B270528AE86990021AF51 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9C0B270628AE86990021AF51 /* Build configuration list for PBXNativeTarget "MediaInfo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9C0B270728AE86990021AF51 /* Debug */,
+				9C0B270828AE86990021AF51 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9C0B26F728AE86990021AF51 /* Project object */;
+}
